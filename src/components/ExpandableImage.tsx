@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface ExpandableImageProps {
   src: string;
@@ -19,31 +19,6 @@ export default function ExpandableImage({
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px'
 }: ExpandableImageProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  // Renderizar imagen básica si no está montado (SSR)
-  if (!isMounted) {
-    return (
-      <div className={`relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden bg-gray-700 shadow-lg ${className}`}>
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover object-center"
-          sizes={sizes}
-          priority={priority}
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center'
-          }}
-        />
-      </div>
-    );
-  }
 
   return (
     <>

@@ -100,7 +100,7 @@ dist
 
 # Gatsby files
 .cache/
-public
+# public - REMOVED: This was preventing images and logos from being uploaded
 
 # Storybook build outputs
 .out

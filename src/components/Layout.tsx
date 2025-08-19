@@ -15,7 +15,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <img src="logo.svg" alt="TecBits Logo" className="h-8 w-8" />
+              <img src="/logo.svg" alt="TecBits Logo" className="h-8 w-8" />
               <span className="text-xl font-bold text-white">{siteConfig.name}</span>
             </Link>
             
@@ -59,7 +59,7 @@ export default function Layout({ children }: LayoutProps) {
             {/* Brand */}
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src="logo.svg" alt="TecBits Logo" className="h-6 w-6" />
+                <img src="/logo.svg" alt="TecBits Logo" className="h-6 w-6" />
                 <span className="text-lg font-bold text-white">{siteConfig.name}</span>
               </div>
             <p className="text-gray-400 text-sm">

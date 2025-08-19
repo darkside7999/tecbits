@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   icons: {
     icon: [
-      { url: 'logo.svg', sizes: '32x32', type: 'image/x-icon' },
-      { url: 'logo.svg', type: 'image/svg+xml' }
+      { url: '/logo.svg', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/logo.svg', type: 'image/svg+xml' }
     ],
-    shortcut: 'logo.svg',
-    apple: 'logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
   },
   formatDetection: {
     email: false,

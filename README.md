@@ -4,7 +4,7 @@ Un blog de noticias moderno y minimalista construido con Next.js 14, TypeScript 
 
 ## 🌐 Sitio en Vivo
 
-**URL de Producción:** https://tecbits-qma2q1dcg-darkside7999s-projects.vercel.app
+**URL de Producción:** https://tecbits.vercel.app
 
 ## 🚀 Características
 
@@ -27,7 +27,7 @@ Un blog de noticias moderno y minimalista construido con Next.js 14, TypeScript 
 - **Optimización automática** con Next.js Image
 - **Formatos modernos** (WebP, AVIF) para mejor rendimiento
 - **Responsive images** con tamaños optimizados
-- **Rutas relativas** para compatibilidad con Vercel
+- **Rutas absolutas** para compatibilidad con Vercel
 
 ### ⚡ Rendimiento
 - **Generación estática** (SSG) para máxima velocidad

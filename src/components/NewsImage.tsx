@@ -16,17 +16,16 @@ export default function NewsImage({
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px'
 }: NewsImageProps) {
   return (
-    <div className={`relative w-full rounded-lg overflow-hidden bg-gray-700 shadow-lg ${className}`}>
+    <div className={`relative w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden bg-gray-700 shadow-lg ${className}`}>
       <Image
         src={src}
         alt={alt}
-        width={1200}
-        height={800}
-        className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+        fill
+        className="object-cover object-center transition-transform duration-300 hover:scale-105"
         sizes={sizes}
         priority={priority}
         style={{
-          objectFit: 'contain',
+          objectFit: 'cover',
           objectPosition: 'center'
         }}
       />

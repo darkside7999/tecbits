@@ -4,6 +4,7 @@ import './globals.css'
 import Layout from '@/components/Layout'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { siteConfig } from '@/config/site'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -70,6 +71,7 @@ export default function RootLayout({
             {children}
           </Layout>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   )

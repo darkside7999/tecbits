@@ -2,6 +2,10 @@
 
 Un blog de noticias moderno y minimalista construido con Next.js 14, TypeScript y Tailwind CSS. Especializado en noticias de inteligencia artificial, machine learning y tecnología emergente. Diseñado para ofrecer una experiencia de lectura excepcional con optimizaciones de rendimiento y SEO.
 
+## 🌐 Sitio en Vivo
+
+**URL de Producción:** https://tecbits-qma2q1dcg-darkside7999s-projects.vercel.app
+
 ## 🚀 Características
 
 ### ✨ Diseño y UX
@@ -23,6 +27,7 @@ Un blog de noticias moderno y minimalista construido con Next.js 14, TypeScript 
 - **Optimización automática** con Next.js Image
 - **Formatos modernos** (WebP, AVIF) para mejor rendimiento
 - **Responsive images** con tamaños optimizados
+- **Rutas relativas** para compatibilidad con Vercel
 
 ### ⚡ Rendimiento
 - **Generación estática** (SSG) para máxima velocidad
@@ -63,7 +68,7 @@ src/
 ├── config/                # Configuración
 │   └── site.ts           # Configuración del sitio
 ├── data/                  # Datos
-│   └── news.json         # Datos de noticias
+│   └── news.ts           # Datos de noticias (TypeScript)
 ├── types/                 # Tipos TypeScript
 │   └── news.ts           # Tipos de noticias
 └── utils/                 # Utilidades
@@ -89,12 +94,17 @@ cd tecbits-blog
 npm install
 ```
 
-3. **Ejecuta el servidor de desarrollo**
+3. **Configura las variables de entorno (opcional)**
+```bash
+cp env.example .env.local
+```
+
+4. **Ejecuta el servidor de desarrollo**
 ```bash
 npm run dev
 ```
 
-4. **Abre tu navegador**
+5. **Abre tu navegador**
 ```
 http://localhost:3000
 ```

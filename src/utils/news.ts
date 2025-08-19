@@ -1,5 +1,5 @@
 import { NewsItem } from '@/types/news';
-import newsData from '@/data/news.json';
+import { newsData } from '@/data/news';
 
 /**
  * Obtiene todas las noticias ordenadas por fecha de publicación (más recientes primero)

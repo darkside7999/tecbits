@@ -14,16 +14,16 @@ export const metadata: Metadata = {
   },
   description: siteConfig.seo.defaultDescription,
   keywords: ['noticias', 'tecnología', 'inteligencia artificial', 'IA', 'machine learning', 'innovación'],
-  authors: [{ name: siteConfig.author.name }],
+  authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
   icons: {
     icon: [
-      { url: '/logo.svg', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/logo.svg', type: 'image/svg+xml' }
+      { url: 'logo.svg', sizes: '32x32', type: 'image/x-icon' },
+      { url: 'logo.svg', type: 'image/svg+xml' }
     ],
-    shortcut: '/logo.svg',
-    apple: '/logo.svg',
+    shortcut: 'logo.svg',
+    apple: 'logo.svg',
   },
   formatDetection: {
     email: false,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteConfig.seo.siteUrl),
   openGraph: {
-    type: siteConfig.seo.openGraph.type,
+    type: 'website',
     locale: siteConfig.seo.openGraph.locale,
     url: siteConfig.seo.openGraph.url,
     title: siteConfig.seo.defaultTitle,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.seo.openGraph.siteName,
   },
   twitter: {
-    card: siteConfig.seo.twitter.cardType,
+    card: 'summary_large_image',
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
   },

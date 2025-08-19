@@ -13,6 +13,24 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      aspectRatio: {
+        'video': '16 / 9',
+        'square': '1 / 1',
+        'wide': '16 / 9',
+        'tall': '3 / 4',
+        'ultrawide': '21 / 9',
+      },
+      objectPosition: {
+        'center': 'center',
+        'top': 'top',
+        'bottom': 'bottom',
+        'left': 'left',
+        'right': 'right',
+        'top-left': 'top left',
+        'top-right': 'top right',
+        'bottom-left': 'bottom left',
+        'bottom-right': 'bottom right',
+      },
       typography: {
         DEFAULT: {
           css: {

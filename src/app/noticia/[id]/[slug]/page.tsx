@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getNewsById, getAllNews, formatDate, generateSlug } from '@/utils/news';
 import ShareButtons from '@/components/ShareButtons';
+import ResponsiveImage from '@/components/ResponsiveImage';
 import { siteConfig } from '@/config/site';
 
 interface NewsPageProps {
@@ -148,17 +148,15 @@ export default async function NewsPage({ params }: NewsPageProps) {
         </p>
       </header>
 
-      {/* Featured Image */}
-      <div className="relative w-full h-64 md:h-96 mb-8 rounded-lg overflow-hidden">
-        <Image
-          src={news.imageUrl}
-          alt={news.title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 800px"
-          priority
-        />
-      </div>
+      {/* Featured Image - Usando ResponsiveImage */}
+      <ResponsiveImage
+        src={news.imageUrl}
+        alt={news.title}
+        aspectRatio="wide"
+        containerClassName="w-full h-64 md:h-80 lg:h-96 mb-8 rounded-lg"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px"
+        priority
+      />
 
       {/* Article Content */}
       <div className="prose prose-lg max-w-none">

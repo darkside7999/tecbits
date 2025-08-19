@@ -134,6 +134,56 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Responsive Images Showcase */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Imágenes Adaptativas
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Nuestras imágenes se adaptan automáticamente a cualquier dispositivo, 
+              manteniendo siempre la mejor calidad y proporción visual.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3">Adaptación Automática</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Las imágenes se ajustan automáticamente al tamaño del contenedor, 
+                manteniendo siempre la proporción correcta.
+              </p>
+              <div className="aspect-video bg-gray-700 rounded-lg flex items-center justify-center">
+                <span className="text-gray-400 text-sm">Imagen Responsive</span>
+              </div>
+            </div>
+            
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3">Optimización Inteligente</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Carga diferida y formatos modernos (WebP, AVIF) para máxima velocidad 
+                y calidad visual.
+              </p>
+              <div className="aspect-square bg-gray-700 rounded-lg flex items-center justify-center">
+                <span className="text-gray-400 text-sm">Imagen Optimizada</span>
+              </div>
+            </div>
+            
+            <div className="bg-gray-800 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-3">Experiencia Fluida</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Transiciones suaves y efectos hover que mejoran la experiencia 
+                de navegación del usuario.
+              </p>
+              <div className="aspect-[16/9] bg-gray-700 rounded-lg flex items-center justify-center">
+                <span className="text-gray-400 text-sm">Imagen Interactiva</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

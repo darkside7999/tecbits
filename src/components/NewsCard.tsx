@@ -1,21 +1,21 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { NewsCardProps } from '@/types/news';
 import { formatDate, generateSlug } from '@/utils/news';
 import ShareButtons from './ShareButtons';
+import ResponsiveImage from './ResponsiveImage';
 
 export default function NewsCard({ news }: NewsCardProps) {
   return (
     <article className="bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
       <Link href={`/noticia/${news.id}/${generateSlug(news.title)}`}>
         <div className="flex flex-col md:flex-row">
-          {/* Imagen a la izquierda */}
-          <div className="relative w-full md:w-48 h-48 md:h-auto flex-shrink-0">
-            <Image
+          {/* Imagen a la izquierda - Usando ResponsiveImage */}
+          <div className="w-full md:w-48 h-48 md:h-auto flex-shrink-0">
+            <ResponsiveImage
               src={news.imageUrl}
               alt={news.title}
-              fill
-              className="object-cover"
+              aspectRatio="square"
+              containerClassName="h-full"
               sizes="(max-width: 768px) 100vw, 192px"
               priority={false}
               loading="lazy"

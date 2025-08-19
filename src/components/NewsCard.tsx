@@ -18,7 +18,6 @@ export default function NewsCard({ news }: NewsCardProps) {
               containerClassName="h-full"
               sizes="(max-width: 768px) 100vw, 192px"
               priority={false}
-              loading="lazy"
             />
           </div>
           

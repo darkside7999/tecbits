@@ -20,7 +20,7 @@ export default function ResponsiveImage({
   containerClassName = '',
   sizes = '(max-width: 768px) 100vw, 800px',
   priority = false,
-  loading = 'lazy',
+  loading,
   aspectRatio = 'auto',
   children
 }: ResponsiveImageProps) {
@@ -32,6 +32,9 @@ export default function ResponsiveImage({
     auto: ''
   };
 
+  // Determinar el loading basado en priority
+  const loadingProp = priority ? undefined : (loading || 'lazy');
+
   return (
     <div className={`relative overflow-hidden bg-gray-700 ${aspectRatioClasses[aspectRatio]} ${containerClassName}`}>
       <Image
@@ -41,7 +44,7 @@ export default function ResponsiveImage({
         className={`object-cover object-center transition-transform duration-300 hover:scale-105 ${className}`}
         sizes={sizes}
         priority={priority}
-        loading={loading}
+        loading={loadingProp}
         style={{
           objectFit: 'cover',
           objectPosition: 'center'

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getNewsById, getAllNews, formatDate, generateSlug } from '@/utils/news';
 import ShareButtons from '@/components/ShareButtons';
-import ResponsiveImage from '@/components/ResponsiveImage';
+import NewsImage from '@/components/NewsImage';
 import { siteConfig } from '@/config/site';
 
 interface NewsPageProps {
@@ -148,15 +148,14 @@ export default async function NewsPage({ params }: NewsPageProps) {
         </p>
       </header>
 
-      {/* Featured Image - Usando ResponsiveImage */}
-      <ResponsiveImage
-        src={news.imageUrl}
-        alt={news.title}
-        aspectRatio="wide"
-        containerClassName="w-full h-64 md:h-80 lg:h-96 mb-8 rounded-lg"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 800px, 1200px"
-        priority
-      />
+      {/* Featured Image - Usando NewsImage especializado */}
+      <div className="w-full mb-8">
+        <NewsImage
+          src={news.imageUrl}
+          alt={news.title}
+          priority
+        />
+      </div>
 
       {/* Article Content */}
       <div className="prose prose-lg max-w-none">

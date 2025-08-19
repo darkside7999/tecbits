@@ -35,8 +35,11 @@ export default function ResponsiveImage({
   // Determinar el loading basado en priority
   const loadingProp = priority ? undefined : (loading || 'lazy');
 
+  // Si es auto y tiene altura específica, no aplicar aspect ratio
+  const finalAspectRatioClass = aspectRatio === 'auto' ? '' : aspectRatioClasses[aspectRatio];
+
   return (
-    <div className={`relative overflow-hidden bg-gray-700 ${aspectRatioClasses[aspectRatio]} ${containerClassName}`}>
+    <div className={`relative overflow-hidden bg-gray-700 ${finalAspectRatioClass} ${containerClassName}`}>
       <Image
         src={src}
         alt={alt}

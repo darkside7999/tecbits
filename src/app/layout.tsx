@@ -20,11 +20,15 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   icons: {
     icon: [
-      { url: '/logo.svg', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/logo.svg', type: 'image/svg+xml' }
+      { url: '/logo.svg', type: 'image/svg+xml' },
+      { url: '/logo.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/logo.svg', sizes: '16x16', type: 'image/svg+xml' }
     ],
     shortcut: '/logo.svg',
     apple: '/logo.svg',
+    other: [
+      { rel: 'mask-icon', url: '/logo.svg', color: '#10b981' }
+    ]
   },
   formatDetection: {
     email: false,
@@ -65,6 +69,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="dark">
+      <head>
+        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/logo.svg" />
+        <link rel="apple-touch-icon" href="/logo.svg" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <Layout>

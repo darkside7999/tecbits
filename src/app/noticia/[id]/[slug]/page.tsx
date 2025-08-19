@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getNewsById, getAllNews, formatDate, generateSlug } from '@/utils/news';
 import ShareButtons from '@/components/ShareButtons';
-import NewsImage from '@/components/NewsImage';
+import ExpandableImage from '@/components/ExpandableImage';
 import { siteConfig } from '@/config/site';
 
 interface NewsPageProps {
@@ -148,9 +148,9 @@ export default async function NewsPage({ params }: NewsPageProps) {
         </p>
       </header>
 
-      {/* Featured Image - Usando NewsImage especializado */}
+      {/* Featured Image - Usando ExpandableImage para funcionalidad de expandir */}
       <div className="w-full mb-8">
-        <NewsImage
+        <ExpandableImage
           src={news.imageUrl}
           alt={news.title}
           priority
